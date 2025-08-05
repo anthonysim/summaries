@@ -9,8 +9,7 @@ export default function Input({
 }: InputProps) {
   const inputId = id || props.name || "input";
 
-  const baseStyles =
-    "border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500";
+  const baseStyles = "border px-3 py-2 text-sm focus:outline-none";
 
   const variants: Record<NonNullable<InputProps["variant"]>, string> = {
     primary: "rounded-full border-2",
