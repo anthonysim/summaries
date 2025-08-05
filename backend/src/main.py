@@ -6,6 +6,6 @@ app = FastAPI()
 
 @app.get("/summary")
 def get_summary():
-    return display_summary("https://www.nbcnews.com/news/us-news/chi-alpha-texas-abuse-allegations-christian-missionary-sex-offender-rcna220069")
+    return display_summary("")
 
 
