@@ -1,11 +1,11 @@
 from fastapi import FastAPI
-import openai
 
 from src.utils.summarize import display_summary
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello, FastAPI!"}
+@app.get("/summary")
+def get_summary():
+    return display_summary("https://www.nbcnews.com/news/us-news/chi-alpha-texas-abuse-allegations-christian-missionary-sex-offender-rcna220069")
+
 

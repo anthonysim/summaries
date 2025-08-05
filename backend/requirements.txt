@@ -4,3 +4,4 @@ openai
 ipython
 requests
 bs4
+python-dotenv
