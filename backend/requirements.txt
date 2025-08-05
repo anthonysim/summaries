@@ -1,0 +1,6 @@
+fastapi[all]
+uvicorn[standard]
+openai
+ipython
+requests
+bs4
