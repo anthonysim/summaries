@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Response from "./components/Response";
-import Input from "./components/Input";
-import Button from "./components/Button";
-import { FaArrowUp } from "react-icons/fa";
+import Input from "./components/ui/Input";
+import SearchButton from "./components/SearchButton";
 
 export default function App() {
   const [userInput, setUserInput] = useState<string>("");
@@ -25,14 +24,13 @@ export default function App() {
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
               placeholder="What bull@#$% should I summarize?"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  console.log("Enter key pressed", userInput);
+                }
+              }}
             />
-            <Button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 cursor-pointer rounded-lg"
-              variant="secondary"
-              onClick={submitHandler}
-            >
-              <FaArrowUp size={20} />
-            </Button>
+            <SearchButton submitHandler={submitHandler} />
           </div>
         </div>
       </div>
