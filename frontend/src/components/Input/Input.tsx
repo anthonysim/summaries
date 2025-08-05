@@ -26,6 +26,7 @@ export default function Input({
       <input
         id={inputId}
         className={`${baseStyles} ${variants[variant]} ${className}`}
+        autoComplete="off"
         {...props}
       />
     </>
